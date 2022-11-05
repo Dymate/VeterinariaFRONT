@@ -1,0 +1,20 @@
+div.header {
+  width: 100vw;
+  height: 7vh;
+  background-color: aliceblue;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.header div.logo,
+div.header div.user-info {
+  padding: 0 2rem;
+  font-weight: 600;
+}
+
+div.header div.user-info * {
+  padding: 0.25rem 0;
+}

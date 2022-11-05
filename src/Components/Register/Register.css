@@ -1,0 +1,23 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.register-form h1 {
+  margin: 0.2rem;
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.register-form form div.error {
+  max-width: 200px;
+}

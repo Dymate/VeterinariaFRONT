@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { NotFound } from './views/NotFound/NotFound';
+import { AuthLayout, DashboardLayout, RootLayout } from './Layouts';
+import { Dashboard, Login, Register, Profile } from './Components';
+import { PetResume } from './Components/PetResume';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: '/',
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: '/',
+            element: <Dashboard />
+          },
+          {
+            path: '/profile',
+            element: <Profile />
+          },
+          {
+            path: '/pet/:id',
+            element: <PetResume />
+          }
+        ]
+      },
+      {
+        path: '/',
+        element: <AuthLayout />,
+        children: [
+          {
+            path: '/login',
+            element: <Login />
+          },
+          {
+            path: '/registro',
+            element: <Register />
+          }
+        ]
+      }
+    ]
+  }
+]);
 
-export default App;
+export const App: React.FC = () => <RouterProvider router={router} />;

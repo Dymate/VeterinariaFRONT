@@ -1,0 +1,25 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.login-form h1 {
+  margin: 0.2rem;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.login-form form div.error {
+  max-width: 200px;
+}
+
+

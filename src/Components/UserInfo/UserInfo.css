@@ -1,0 +1,12 @@
+div.user-info-container {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  margin: 4rem;
+  padding: 2rem;
+}
+
+div.user-info-container h2,
+div.user-info-container p {
+  font-weight: 600;
+}
+

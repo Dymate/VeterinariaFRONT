@@ -1,0 +1,63 @@
+.auth-layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  min-width: 50vw;
+  max-width: 75vw;
+  min-height: 40vh;
+  max-height: 90vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+
+  box-shadow: 0rem 0rem 0.3rem 0.2rem rgb(22, 22, 22);
+}
+
+div.logo {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+div.logo img {
+  max-width: 100%;
+}
+
+.content {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  div.logo img{
+    animation: pulse infinite 3s ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
