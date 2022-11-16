@@ -34,8 +34,8 @@ export const PetResume: React.FC = () => {
         <div className='pet-info-data-detail'>
           <div> <span className='prefix'>Nombre: </span> {pet.name} </div>
           <div> <span className='prefix'>Edad: </span> {pet.age} </div>
-          <div> <span className='prefix'>Sexo: </span> {pet.genre} </div>
-          <div> <span className='prefix'>Peso: </span> {pet.weigth} </div>
+          <div> <span className='prefix'>Sexo: </span> {pet.gender} </div>
+          <div> <span className='prefix'>Peso: </span> {pet.weight} </div>
           <div> <span className='prefix'>Especie: </span> {pet.species} </div>
           <div> <span className='prefix'>Raza: </span> {pet.race} </div>
           <div> <span className='prefix'>Color: </span> {pet.color} </div>
